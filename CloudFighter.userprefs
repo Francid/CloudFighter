@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\FighterController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\EnemyController.cs">
     <Files>
-      <File FileName="Assets\_Scripts\FighterController.cs" Line="2" Column="26" />
-      <File FileName="Assets\_Scripts\CloudMover.cs" Line="29" Column="2" />
+      <File FileName="Assets\_Scripts\DragonFireController.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\FighterController.cs" Line="26" Column="96" />
+      <File FileName="Assets\_Scripts\CloudMover.cs" Line="26" Column="18" />
+      <File FileName="Assets\_Scripts\EnemyController.cs" Line="22" Column="61" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

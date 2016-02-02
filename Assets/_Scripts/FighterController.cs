@@ -5,20 +5,28 @@ public class FighterController : MonoBehaviour {
 
 	// PUBLIC VARIABLES
 	public float speed;
+	public GameObject ball;
+	public GameObject ballSpawn;
 
 	// PRIVATE VARIABLES
-	private Transform transform;
+	private Transform _transform;
 	private float moveVertical;
 	private Vector2 currentPostion;
 
+
 	// Use this for initialization
 	void Start () {
-		transform = gameObject.GetComponent<Transform> ();
+		this._transform = gameObject.GetComponent<Transform> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		this.currentPostion = this.transform.position;
+
+		if (Input.GetButton ("Fire1")) {
+			Instantiate (this.ball, this.ballSpawn.transform.position, this.ballSpawn.transform.rotation);
+		}
+
+		this.currentPostion = this._transform.position;
 
 		this.moveVertical = Input.GetAxis ("Vertical");
 		if (this.moveVertical < 0) {
@@ -27,6 +35,20 @@ public class FighterController : MonoBehaviour {
 		if (this.moveVertical > 0) {
 			this.currentPostion += new Vector2 (0.0f, this.speed);
 		}
-		this.transform.position = this.currentPostion;
+
+		SetBoundary ();
+
+		this._transform.position = this.currentPostion;
+	}
+
+	private void SetBoundary(){
+
+		if(this.currentPostion.y <= -115){
+			this.currentPostion.y = -115f;
+		}
+
+		if (this.currentPostion.y >= 115) {
+			this.currentPostion.y = 115f;
+		}
 	}
 }
