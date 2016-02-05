@@ -22,11 +22,17 @@ public class EnemyDController : MonoBehaviour {
 		this._enemyDTransform.position = this._enemyDPosition;
 
 		if (this._enemyDTransform.position.x <= -212) {
-			EnemyDestroyed ();
+			Destroy(gameObject);
 		}
 	}
-		
-	private void EnemyDestroyed(){
-		DestroyImmediate(gameObject, true);
+
+	public void OnTriggerEnter2D(Collider2D other){
+
+		if (other.gameObject.CompareTag ("DragonFire")) {
+			Destroy(gameObject);
+		}
+		if (other.gameObject.CompareTag ("Dragon")) {
+			Destroy(gameObject);
+		}
 	}
 }

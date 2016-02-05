@@ -3,8 +3,9 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-	// Public Variables
+	// PUBLIC INSTANCE VARIABLE
 	public int enemySpeed;
+	public GameController gameController;
 
 	//Private Variables
 	private Transform _transform;
@@ -33,7 +34,11 @@ public class EnemyController : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D other){
 
-		if (other.gameObject.CompareTag ("DragonFire") || other.gameObject.CompareTag ("Dragon")) {
+		if (other.gameObject.CompareTag ("DragonFire")) {
+			this.gameController.ScoreValue += 50;
+			Reset ();
+		}
+		if (other.gameObject.CompareTag ("Dragon")) {
 			Reset ();
 		}
 	}

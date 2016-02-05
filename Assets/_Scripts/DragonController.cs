@@ -55,7 +55,4 @@ public class DragonController : MonoBehaviour {
 			this.currentPostion.y = 115f;
 		}
 	}
-
-	private void FireDragonBall(){
-	}
 }
