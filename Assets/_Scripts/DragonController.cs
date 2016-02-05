@@ -14,11 +14,13 @@ public class DragonController : MonoBehaviour {
 	private float moveVertical;
 	private Vector2 currentPostion;
 	private float nextFire;
+	private AudioSource _dragonShotSource;
 
 	// Use this for initialization
 	void Start () {
 		this._transform = gameObject.GetComponent<Transform> ();
 		this._dragonBallTransform = this.dragonBall.gameObject.GetComponent<Transform> ();
+		this._dragonShotSource = this.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class DragonController : MonoBehaviour {
 			nextFire = Time.time + fireRate;
 			this._dragonBallTransform.position = this._transform.position;
 			Instantiate (this.dragonBall);
+			this._dragonShotSource.Play ();
 		}
 
 		this.currentPostion = this._transform.position;

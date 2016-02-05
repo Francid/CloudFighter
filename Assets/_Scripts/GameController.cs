@@ -22,6 +22,9 @@ public class GameController : MonoBehaviour {
 	private Transform _enemyDTransform;
 	private int _scoreValue;
 	private int _livesValue;
+	private AudioSource[] _audioSources;
+	private AudioSource _backgroundSource;
+	private AudioSource _gameOverSource;
 
 	public int ScoreValue{
 		get{
@@ -48,6 +51,7 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		this._audioSources = gameObject.GetComponents<AudioSource> ();
 		this._Intialize ();
 	}
 	
@@ -60,6 +64,9 @@ public class GameController : MonoBehaviour {
 		this.LivesValue = 3;
 		this.gameOverLabel.gameObject.SetActive (false);
 		this.restartButton.gameObject.SetActive (false);
+		this._backgroundSource = this._audioSources [0];
+		this._gameOverSource = this._audioSources [1];
+		this._backgroundSource.Play ();
 
 		this._enemyDTransform = this.enemyDistration.GetComponent<Transform>();
 		StartCoroutine (EnemyWaves ());
@@ -72,6 +79,8 @@ public class GameController : MonoBehaviour {
 		this.scoreLabel.gameObject.SetActive (false);
 		this.gameOverLabel.gameObject.SetActive (true);
 		this.restartButton.gameObject.SetActive (true);
+		this._backgroundSource.Stop ();
+		this._gameOverSource.Play ();
 	}
 
 	// Instantiate New Enemy at a Setting time

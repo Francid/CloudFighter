@@ -1,14 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\DragonCollider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\EnemyController.cs">
     <Files>
-      <File FileName="Assets\_Scripts\GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\DragonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\DragonFireController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\FighterController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\CloudMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\GameController.cs" Line="64" Column="10" />
+      <File FileName="Assets\_Scripts\DragonController.cs" Line="33" Column="35" />
+      <File FileName="Assets\_Scripts\DragonFireCollider.cs" Line="10" Column="66" />
+      <File FileName="Assets\_Scripts\DragonCollider.cs" Line="16" Column="46" />
       <File FileName="Assets\_Scripts\EnemyController.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\DragonCollider.cs" Line="11" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
