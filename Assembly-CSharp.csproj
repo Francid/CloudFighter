@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\CloudMover.cs" />
+     <Compile Include="Assets\_Scripts\DragonCollider.cs" />
      <Compile Include="Assets\_Scripts\DragonController.cs" />
+     <Compile Include="Assets\_Scripts\DragonFireCollider.cs" />
      <Compile Include="Assets\_Scripts\DragonFireController.cs" />
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
      <Compile Include="Assets\_Scripts\FighterController.cs" />
