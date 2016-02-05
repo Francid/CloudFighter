@@ -17,6 +17,7 @@ public class DragonFireCollider : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Enemy")) {
 			Debug.Log ("Collider with the enemey");
+			Destroy (this.gameObject);
 		}
 	}
 }

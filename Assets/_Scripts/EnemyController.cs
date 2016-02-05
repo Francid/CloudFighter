@@ -30,4 +30,11 @@ public class EnemyController : MonoBehaviour {
 	public void Reset(){
 		this._transform.position = new Vector2 (220f, Random.Range(-119,119));
 	}
+
+	public void OnTriggerEnter2D(Collider2D other){
+
+		if (other.gameObject.CompareTag ("DragonFire") || other.gameObject.CompareTag ("Dragon")) {
+			Reset ();
+		}
+	}
 }
