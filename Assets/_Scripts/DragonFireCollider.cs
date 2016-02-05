@@ -16,7 +16,6 @@ public class DragonFireCollider : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D other){
 
 		if (other.gameObject.CompareTag ("Enemy")) {
-			Debug.Log ("Collider with the enemey");
 			Destroy (this.gameObject);
 		}
 	}

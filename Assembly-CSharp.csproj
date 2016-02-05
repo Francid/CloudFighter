@@ -51,6 +51,7 @@
      <Compile Include="Assets\_Scripts\DragonFireCollider.cs" />
      <Compile Include="Assets\_Scripts\DragonFireController.cs" />
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
+     <Compile Include="Assets\_Scripts\EnemyDController.cs" />
      <Compile Include="Assets\_Scripts\FighterController.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
  <Reference Include="UnityEngine.UI">
